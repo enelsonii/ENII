@@ -1,0 +1,88 @@
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Frog Dev Portfolio</title>
+        <!-- Include your CSS files -->
+        <link rel="stylesheet" href="css/style.css">
+         <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .nav-link {
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: currentColor;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+    </style>
+    </head>
+
+    <body class="pixel-theme">
+        <!-- 1. The container for the Prism WebGL Canvas -->
+        <div id="prism-bg"></div>
+<!-- Navigation -->
+        <header>
+            <div class="logo">
+                <span>🐸</span> Frog Dev
+            </div>
+            <nav class="bg-indigo-900 text-white p-4 rounded-xl flex justify-between items-center">
+            <span class="font-bold">AppNav</span>
+            <button id="menu-btn" class="md:hidden p-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </button>
+            <div id="mobile-menu" class="hidden md:flex space-x-6 font-medium">
+                <a href="#">Dashboard</a>
+                <a href="#">Settings</a>
+                <a href="#">Profile</a>
+            </div>
+        </nav>
+        </header>
+
+
+<!-- Main Content -->
+    <main class="flex-grow max-w-6xl mx-auto px-6 py-12">
+        
+        <!-- Large Center Image Placeholder -->
+        <section class="mb-16">
+            <a href="gallery.html" class="block w-full h-96 hero-placeholder rounded-2xl flex flex-col items-center justify-center bg-gray-100 hover:bg-blue-50 cursor-pointer text-gray-500">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-16 h-16 mb-4 opacity-50" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                </svg>
+                <span class="text-xl font-semibold">Click to View Gallery</span>
+            </a>
+        </section>
+
+        <!-- Placeholder for Bio/Projects -->
+        <section class="grid md:grid-cols-2 gap-12">
+            <div class="bg-white p-8 rounded-xl shadow-sm">
+                <h2 class="text-3xl font-bold mb-4">About Me</h2>
+                <p class="text-gray-600">Welcome to my digital garden. I specialize in building creative web experiences and exploring the intersection of design and logic.</p>
+            </div>
+            <div class="bg-white p-8 rounded-xl shadow-sm">
+                <h2 class="text-3xl font-bold mb-4">Latest Dev Work</h2>
+                <p class="text-gray-600">Check out my recent web projects where I've implemented unique interactive elements and responsive layouts.</p>
+            </div>
+        </section>
+    </main>
+
+        <footer>
+            <p>&copy; 2026 Frog Dev Portfolio. Built with passion and code.</p>
+        </footer>
+        <!-- 2. Import your complete Vanilla JS script -->
+        <script type="module" src="./prism.js"></script>
+    </body>
+
+    </html>

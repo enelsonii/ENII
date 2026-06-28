@@ -3,65 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Artwork Gallery | Creative Pursuits</title>
+    <title>Portfolio | Professional Background</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap">
-    <style>
-        .art-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-
-        .art-item {
-            position: relative;
-            overflow: hidden;
-            border-radius: 8px;
-            aspect-ratio: 1 / 1;
-            background: #eee;
-        }
-
-        .art-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s ease;
-        }
-
-        .art-item:hover img {
-            transform: scale(1.1);
-        }
-
-        .overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.7);
-            color: white;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-            text-align: center;
-            padding: 1rem;
-        }
-
-        .art-item:hover .overlay {
-            opacity: 1;
-        }
-
-        @media (max-width: 768px) {
-            .art-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
 </head>
+<body class="aurora-bg">
+
 <body>
     <header>
         <div class="logo">
@@ -69,7 +16,7 @@
         </div>
         <nav>
             <ul>
-                <li><a href="index.html">Home</a></li>
+                <li><a href="HomePage.html">Home</a></li>
                 <li><a href="gallery.html">Artwork</a></li>
                 <li><a href="web-design.html">Web Design</a></li>
                 <li><a href="contact.html">Contact</a></li>
@@ -78,39 +25,35 @@
     </header>
 
     <main class="container">
-        <h1>Creative Gallery</h1>
-        <p>A collection of my visual artwork and design experiments.</p>
+        <section class="bio section">
+            <h1>Hi, I'm [Your Name]</h1>
+            <p class="mt-2">Transitioning from <strong>API & Integration Support Engineering</strong> to <strong>Creative Full-Stack Web Development</strong>. I bridge the gap between technical reliability and creative design.</p>
+        </section>
 
-        <div class="art-grid">
-            <div class="art-item">
-                <img src="https://via.placeholder.com/500x500?text=Artwork+1" alt="Artwork 1">
-                <div class="overlay">
-                    <h3>Project One</h3>
-                    <p>Digital illustration exploring color and form.</p>
+        <section class="resume mt-2">
+            <h2>Professional Experience</h2>
+            <div class="pixel-card">
+                <h3>Technical Summary</h3>
+                <p>Expertise in API integrations, full-stack development, and problem-solving. Strong foundation in Python, JavaScript, and modern web frameworks.</p>
+                <a href="#" class="accent-link">Download Resume (PDF)</a>
+            </div>
+        </section>
+
+        <section class="projects mt-2">
+            <h2>Passion Projects</h2>
+            <div class="project-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;">
+                <div class="pixel-card">
+                    <h3>Artwork Gallery</h3>
+                    <p>A collection of creative visual pursuits.</p>
+                    <a href="gallery.html">View Gallery &rarr;</a>
+                </div>
+                <div class="pixel-card">
+                    <h3>Web Experiments</h3>
+                    <p>8-bit themed apps and games built with JavaScript.</p>
+                    <a href="web-design.html">Enter the Playground &rarr;</a>
                 </div>
             </div>
-            <div class="art-item">
-                <img src="https://via.placeholder.com/500x500?text=Artwork+2" alt="Artwork 2">
-                <div class="overlay">
-                    <h3>Project Two</h3>
-                    <p>Abstract design experiment with CSS patterns.</p>
-                </div>
-            </div>
-            <div class="art-item">
-                <img src="https://via.placeholder.com/500x500?text=Artwork+3" alt="Artwork 3">
-                <div class="overlay">
-                    <h3>Project Three</h3>
-                    <p>3D modeling and rendering study.</p>
-                </div>
-            </div>
-            <div class="art-item">
-                <img src="https://via.placeholder.com/500x500?text=Artwork+4" alt="Artwork 4">
-                <div class="overlay">
-                    <h3>Project Four</h3>
-                    <p>Character design for an upcoming game.</p>
-                </div>
-            </div>
-        </div>
+        </section>
     </main>
 
     <footer>
