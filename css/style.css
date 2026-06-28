@@ -6,6 +6,7 @@
     height: 100vh;
     z-index: -1;          /* Puts it behind your content */
     pointer-events: none; /* Allows clicks to pass through to buttons/links */
+    background-color: currentColor;
  }
 
 .nav-link {
