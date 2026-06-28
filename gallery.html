@@ -1,63 +1,85 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio | Professional Background</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap">
-</head>
-<body class="aurora-bg">
+    <html lang="en">
 
-<body>
-    <header>
-        <div class="logo">
-            <span>🐸</span> Frog Dev
-        </div>
-        <nav>
-            <ul>
-                <li><a href="HomePage.html">Home</a></li>
-                <li><a href="gallery.html">Artwork</a></li>
-                <li><a href="web-design.html">Web Design</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Frog Dev Portfolio</title>
+        <!-- Include your CSS files -->
+        <link rel="stylesheet" href="css/style.css">
+         <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .nav-link {
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: currentColor;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+    </style>
+    </head>
 
-    <main class="container">
-        <section class="bio section">
-            <h1>Hi, I'm [Your Name]</h1>
-            <p class="mt-2">Transitioning from <strong>API & Integration Support Engineering</strong> to <strong>Creative Full-Stack Web Development</strong>. I bridge the gap between technical reliability and creative design.</p>
-        </section>
-
-        <section class="resume mt-2">
-            <h2>Professional Experience</h2>
-            <div class="pixel-card">
-                <h3>Technical Summary</h3>
-                <p>Expertise in API integrations, full-stack development, and problem-solving. Strong foundation in Python, JavaScript, and modern web frameworks.</p>
-                <a href="#" class="accent-link">Download Resume (PDF)</a>
+    <body class="pixel-theme">
+        <!-- 1. The container for the Prism WebGL Canvas -->
+        <div id="prism-bg"></div>
+<!-- Navigation -->
+        <header>
+            <nav class="bg-indigo-900 text-white p-4 rounded-xl flex justify-between items-center">
+            <span class="font-bold">🐸 Frog Dev</span>
+            <button id="menu-btn" class="md:hidden p-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </button>
+            <div id="mobile-menu" class="hidden md:flex space-x-6 font-medium">
+                <a href="HomePage.html">Home</a>
+                <a href="gallery.html">Art Gallery</a>
+                <a href="Projects.html">Projects</a>
+                <a href="contact.html">Contact</a>
             </div>
-        </section>
+        </nav>
+        </header>
 
-        <section class="projects mt-2">
-            <h2>Passion Projects</h2>
-            <div class="project-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;">
-                <div class="pixel-card">
-                    <h3>Artwork Gallery</h3>
-                    <p>A collection of creative visual pursuits.</p>
-                    <a href="gallery.html">View Gallery &rarr;</a>
-                </div>
-                <div class="pixel-card">
-                    <h3>Web Experiments</h3>
-                    <p>8-bit themed apps and games built with JavaScript.</p>
-                    <a href="web-design.html">Enter the Playground &rarr;</a>
-                </div>
+
+<!-- Main Content -->
+    <main class="flex-grow max-w-6xl mx-auto px-6 py-12">
+        
+
+        <!-- Placeholder for Bio/Projects -->
+        <section class="grid md:grid-cols-2 gap-12">
+            <div class="bg-white p-8 rounded-xl shadow-sm">
+                <h2 class="text-3xl font-bold mb-4">About Me</h2>
+                <p class="text-gray-600">Welcome to my digital garden. I specialize in building creative web experiences and exploring the intersection of design and logic.</p>
+            </div>
+            <div class="bg-white p-8 rounded-xl shadow-sm">
+                <h2 class="text-3xl font-bold mb-4">Latest Dev Work</h2>
+                <p class="text-gray-600">Check out my recent web projects where I've implemented unique interactive elements and responsive layouts.</p>
+            </div>
+            <div class="bg-white p-8 rounded-xl shadow-sm">
+                <h2 class="text-3xl font-bold mb-4">About Me</h2>
+                <p class="text-gray-600">Welcome to my digital garden. I specialize in building creative web experiences and exploring the intersection of design and logic.</p>
+            </div>
+            <div class="bg-white p-8 rounded-xl shadow-sm">
+                <h2 class="text-3xl font-bold mb-4">Latest Dev Work</h2>
+                <p class="text-gray-600">Check out my recent web projects where I've implemented unique interactive elements and responsive layouts.</p>
             </div>
         </section>
     </main>
 
-    <footer>
-        <p>&copy; 2026 Frog Dev Portfolio. Built with passion and code.</p>
-    </footer>
-</body>
-</html>
+        <footer>
+            <p>&copy; 2026 Frog Dev Portfolio. Built with passion and code.</p>
+        </footer>
+        <!-- 2. Import your complete Vanilla JS script -->
+        <script type="module" src="./prism.js"></script>
+    </body>
+
+    </html>

@@ -1,28 +1,16 @@
-#prism-bg {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    z-index: -1;          /* Puts it behind your content */
-    pointer-events: none; /* Allows clicks to pass through to buttons/links */
-    background-color: currentColor;
- }
+html, body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background-color: #000;
+}
 
-.nav-link {
-            transition: all 0.3s ease;
-            position: relative;
-        }
-.nav-link::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 2px;
-            bottom: -5px;
-            left: 0;
-            background-color: currentColor;
-            transition: width 0.3s ease;
-        }
-.nav-link:hover::after {
-            width: 100%;
-        }
+#prism-bg, #lightpillar-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  pointer-events: none;
+}
